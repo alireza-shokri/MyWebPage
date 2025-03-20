@@ -244,16 +244,19 @@ sect3_p_box.addEventListener("mouseup", function (event) {
   else if (sect3_magdar_mosemove > event.clientX + 40) sect3_work_left();
 });
 // touch-----------------------
+
 let sect3_megdar_touch;
 sect3_p_box.addEventListener("touchstart", function (event) {
-  sect3_megdar_touch = event.touches[0].clientX;
+  sect3_megdar_touch = Math.floor(event.touches[0].clientX);
 });
+
 sect3_p_box.addEventListener("touchend", function (event) {
-  if (sect3_megdar_touch + 40 < event.changedTouches[0].clientX)
-    sect3_work_left();
-  else if (sect3_megdar_touch > event.changedTouches[0].clientX + 40)
-    sect3_work_right();
+  const sect3_megdar_touch_end = Math.floor(event.changedTouches[0].clientX);
+
+  if (sect3_megdar_touch + 10 < sect3_megdar_touch_end) sect3_work_right();
+  else if (sect3_megdar_touch > sect3_megdar_touch_end + 10) sect3_work_left();
 });
+
 // navar
 window.addEventListener("scroll", function (event) {
   let x = window.scrollY;
