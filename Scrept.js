@@ -251,7 +251,7 @@ sect3_p_box.addEventListener("touchstart", function (event) {
 sect3_p_box.addEventListener("touchend", function (event) {
   if (sect3_megdar_touch + 40 < event.changedTouches[0].clientX)
     sect3_work_left();
-  else if (sect3_megdar_touch < event.changedTouches[0].clientX + 40)
+  else if (sect3_megdar_touch > event.changedTouches[0].clientX + 40)
     sect3_work_right();
 });
 // navar
