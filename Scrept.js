@@ -294,14 +294,11 @@ window.onload = function () {
     vaz_menu = "2";
     chang_menu_decoraetion(vaz_menu);
   }
-  setTimeout(() => {
-    $.querySelector(".parent_loader").style.display = "none";
-    $.querySelector(".header").style.display = "block";
-    $.querySelector(".contenir").style.display = "block";
-    let sect3_allstyle_box = getComputedStyle(sect3_all_box[0]);
-    jahat =
-      sect3_all_box[0].offsetWidth + parseFloat(sect3_allstyle_box.margin) * 2;
-  }, 500);
+  $.querySelector(".parent_loader").style.display = "none";
+  $.querySelector(".header").style.display = "block";
+  $.querySelector(".contenir").style.display = "block";
+  let sect3_allstyle_box = getComputedStyle(sect3_all_box[0]);
+  jahat = sect3_all_box[0].offsetWidth + parseFloat(sect3_allstyle_box.margin) * 2;
 };
 // addEventListener
 theme.addEventListener("click", setstorage);
