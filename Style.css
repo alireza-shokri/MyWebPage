@@ -81,6 +81,7 @@ body {
 .header {
   position: relative;
   display: none;
+  user-select: none;
 }
 .navar_hed {
   height: 0.25rem;
@@ -241,6 +242,7 @@ body {
   width: 100%;
   justify-content: space-evenly;
   background-color: var(--background_sect1);
+  user-select: none;
 }
 .sect1_picktur {
   width: 30%;
